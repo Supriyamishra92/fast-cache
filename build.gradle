@@ -1,5 +1,6 @@
 plugins {
-    id 'java'
+    id 'java-library'
+    id 'maven-publish'
 }
 
 group 'fast-cache-manager'
@@ -13,4 +14,16 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'org.supriya'
+            artifactId = 'fast-cache-manager'
+            version = '1.0-SNAPSHOT'
+
+            from components.java
+        }
+    }
 }

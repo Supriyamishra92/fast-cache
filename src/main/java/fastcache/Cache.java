@@ -6,4 +6,6 @@ public interface Cache {
 
     int set(String key, String value);
 
+    Stats stats();
+
 }

@@ -40,6 +40,8 @@ public final class CacheManagementSystem {
                 } else {
                     System.out.println("Value=" + readResult.getValue() + ", found in " + readResult.getReadTimeDelay() + "ms!");
                 }
+            } else if (cmd.equals(("STATS"))){
+                System.out.println(cache.stats());
             } else if (cmd.equalsIgnoreCase("quit")) {
                 System.out.println("Bye!");
                 break;

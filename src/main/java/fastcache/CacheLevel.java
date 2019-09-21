@@ -1,5 +1,7 @@
 package fastcache;
 
+import java.util.List;
+
 public interface CacheLevel extends Cache {
 
     int capacity();
@@ -7,4 +9,5 @@ public interface CacheLevel extends Cache {
     int readTimeDelay();
 
     int writeTimeDelay();
+
 }
